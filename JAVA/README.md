@@ -51,7 +51,7 @@ String과는 다르게 append 시 "a"가 붙은 새로운 문자열을 생성하
 ### 3. StringBuilder vs StringBuffer
 
  두 클래스는 모두 mutable 특성을 가지고 있지만, 두 클래스의 차이점은 **thread-safe 지원 여부**이다.
- **StringBuffer는 String과 같이 thread-safe의 특성을 가진다.** 즉, 멀티쓰레드 환경에서 사용하기 적합하다.
+ **StringBuffer는 String과 같이 thread-safe의 특성을 가진다.** 즉, 멀티쓰레드 환경에서 동기화를 지원한다.
  반대로, StringBuilder는 멀티쓰레드에서 쓰기엔 좋지 않다. 하지만, **StringBuilder는 멀티쓰레드가 아닌 환경**에서 StringBuffer보다 **더 빠른 성능**을 보인다.
  
  - 정리
@@ -60,3 +60,6 @@ String과는 다르게 append 시 "a"가 붙은 새로운 문자열을 생성하
 |-----|--------|--------------|---------------|
 |변화 특성| immutable | mutable | mutable |
 |Thread-safe 지원 여부 | O | O | X |
+
+따라서 단일쓰레드 환경에서 단순한 성능만 놓고 본다면, 연산이 많은 경우 **StringBuilder >> StringBuffer >> String**이라고 볼 수 있다.
+(StringBuffer는 동기화 관련 처리로 인해 StringBuilder에 비해 성능이 좋지 않다.)
