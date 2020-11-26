@@ -26,7 +26,7 @@ for(int i = 0; i < 1000000; i++){
 System.out.println(str);
 ```
 
-위의 코드에서 답은 aaaa... 이다. 여기서 주목해야 할 부분은 **+=**이다. Concatenation 작업은 메모리 초기화와 생성을 이루며 진행되기 때문에 Concatenation 작업이 많거나 loop 내에 있으면 성능이 안 좋아진다.
+위의 코드에서 답은 aaaa... 이다. 여기서 주목해야 할 부분은 "+="이다. Concatenation 작업은 메모리 초기화와 생성을 이루며 진행되기 때문에 Concatenation 작업이 많거나 loop 내에 있으면 성능이 안 좋아진다.
 따라서 자세히 보면 str += "a" 는 str 뒤에 a를 붙이는 것이 아니라 str 뒤에 a를 붙인 new String을 할당하는 것이다.
 concatenation 연산이 16만번 이상이 되면 실행 시간이 10초가 넘어간다고 하니, 해당 연산이 많을 경우에는 사용하지 않는 것이 좋다. (위의 코드 실행 시 1분!)
 
