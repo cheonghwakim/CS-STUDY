@@ -1,7 +1,7 @@
 * [JAVA]
-  * [Java와 C++의 차이점](#Java와-C++의-차이점)
+  * [Java와 C++의 차이점](#Java와-C의-차이점)
   * [Java언어의 장단점](#Java언어의-장단점)
-* [String, StringBuffer, StringBuilder의 차이점](#String,-StirngBuffer,-StringBuilder의-차이점)
+* [String, StringBuffer, StringBuilder의 차이점](#String-StirngBuffer-StringBuilder의-차이점)
 
 ## Java와 C++의 차이점
 
